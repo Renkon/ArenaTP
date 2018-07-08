@@ -6,7 +6,7 @@ import org.uqbar.commons.utils.Observable;
 @Observable
 public class TaskViewModel {
 
-    private Task task = new Task("", "");
+    private Task task = new Task("", "", false);
 
     public Task getTask() {
         return task;

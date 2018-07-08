@@ -8,13 +8,9 @@ public class Task {
     private String description;
     private boolean conceptual;
 
-    public Task(String assignature, String description) {
+    public Task(String assignature, String description, boolean conceptual) {
         this.assignature = assignature;
         this.description = description;
-    }
-
-    public Task(String assignature, String description, boolean conceptual) {
-        this(assignature, description);
         this.conceptual = conceptual;
     }
 

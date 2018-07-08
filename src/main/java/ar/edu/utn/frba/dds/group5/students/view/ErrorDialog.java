@@ -9,15 +9,13 @@ import org.uqbar.arena.windows.WindowOwner;
 
 public class ErrorDialog extends Dialog {
 
-    private String error;
     public ErrorDialog(WindowOwner owner, String error) {
-        super(owner, new ErrorViewModel());
-        this.error = error;
+        super(owner, new ErrorViewModel(error));
     }
 
     @Override
     protected void createFormPanel(Panel panel) {
-        new Label(panel).setText(error);
+        new Label(panel).setText(((ErrorViewModel) this.getModelObject()).getError());
     }
 
     @Override

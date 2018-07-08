@@ -4,6 +4,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class TaskTest {
     private Task task;
@@ -17,7 +19,7 @@ public class TaskTest {
     public void testGetters() {
         assertEquals("Diseño de sistemas", task.getAssignature());
         assertEquals("Tarea", task.getDescription());
-        assertEquals(true, task.isConceptual());
+        assertTrue(task.isConceptual());
     }
 
     @Test
@@ -27,7 +29,7 @@ public class TaskTest {
         task.setConceptual(false);
         assertEquals("Gestión de datos", task.getAssignature());
         assertEquals("TP cuatrimestral", task.getDescription());
-        assertEquals(false, task.isConceptual());
+        assertFalse(task.isConceptual());
     }
 
     @Test

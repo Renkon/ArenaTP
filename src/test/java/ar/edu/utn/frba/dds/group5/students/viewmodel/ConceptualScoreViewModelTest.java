@@ -8,9 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 
 public class ConceptualScoreViewModelTest {
@@ -52,5 +50,7 @@ public class ConceptualScoreViewModelTest {
     @Test
     public void testGetInputValid() {
         assertTrue(viewModel.getInputValid());
+        viewModel.setValue(null);
+        assertFalse(viewModel.getInputValid());
     }
 }

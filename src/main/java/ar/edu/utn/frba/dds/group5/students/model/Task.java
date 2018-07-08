@@ -13,6 +13,11 @@ public class Task {
         this.description = description;
     }
 
+    public Task(String assignature, String description, boolean conceptual) {
+        this(assignature, description);
+        this.conceptual = conceptual;
+    }
+
     @Override
     public String toString() {
         return assignature + " - " + description;

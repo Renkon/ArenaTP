@@ -15,11 +15,15 @@ public class Student {
     private String hashedPassword;
     private List<Assignment> assignments = new ArrayList<>();
 
-    public Student(String firstName, String lastName, int fileId, String githubName, String hashedPassword) {
+    public Student(String firstName, String lastName, int fileId, String githubName) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.fileId = fileId;
         this.githubName = githubName;
+    }
+
+    public Student(String firstName, String lastName, int fileId, String githubName, String hashedPassword) {
+        this(firstName, lastName, fileId, githubName);
         this.hashedPassword = hashedPassword;
     }
 

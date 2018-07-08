@@ -3,9 +3,7 @@ package ar.edu.utn.frba.dds.group5.students.viewmodel;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class TaskViewModelTest {
 
@@ -18,11 +16,9 @@ public class TaskViewModelTest {
 
     @Test
     public void testGetters() {
-        assertEquals("", viewModel.getTask().getAssignature());
+        assertNotNull(viewModel.getTask());
         assertEquals("", viewModel.getAssignature());
-        assertEquals("", viewModel.getTask().getDescription());
         assertEquals("", viewModel.getDescription());
-        assertFalse(viewModel.getTask().isConceptual());
         assertFalse(viewModel.isConceptual());
     }
 

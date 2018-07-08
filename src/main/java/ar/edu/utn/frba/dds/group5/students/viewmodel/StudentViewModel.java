@@ -23,10 +23,6 @@ public class StudentViewModel {
         return selected;
     }
 
-    public void setSelected(boolean selected) {
-        this.selected = selected;
-    }
-
     @Dependencies("student")
     public String getFirstName() {
         return student.getFirstName();

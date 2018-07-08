@@ -11,6 +11,14 @@ public class ConceptualScore implements Score {
         this.modifier = modifier;
     }
 
+    public Character getLetter() {
+        return letter;
+    }
+
+    public Optional<Character> getModifier() {
+        return modifier;
+    }
+
     @Override
     public String toString() {
         // Le agrego trim para poder borrar el espacio del optional

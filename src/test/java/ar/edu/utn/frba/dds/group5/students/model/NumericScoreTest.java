@@ -16,6 +16,11 @@ public class NumericScoreTest {
     }
 
     @Test
+    public void testGettersScore() {
+        assertEquals(7, score.getScore());
+    }
+
+    @Test
     public void testScoreToString() {
         assertEquals("7", score.toString());
     }

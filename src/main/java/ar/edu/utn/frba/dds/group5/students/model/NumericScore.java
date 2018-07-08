@@ -9,6 +9,10 @@ public class NumericScore implements Score {
         this.score = score;
     }
 
+    public int getScore() {
+        return score;
+    }
+
     @Override
     public String toString() {
         return Integer.toString(score);

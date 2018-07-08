@@ -19,6 +19,12 @@ public class ConceptualScoreTest {
     }
 
     @Test
+    public void testGettersScore() {
+        assertEquals(new Character('B'), score.getLetter());
+        assertEquals(Optional.of('+'), score.getModifier());
+    }
+
+    @Test
     public void testScoreToString() {
         assertEquals("B+", score.toString());
     }

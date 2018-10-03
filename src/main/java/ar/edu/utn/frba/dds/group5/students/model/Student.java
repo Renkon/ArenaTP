@@ -1,5 +1,6 @@
 package ar.edu.utn.frba.dds.group5.students.model;
 
+import ar.edu.utn.frba.dds.group5.students.web.model.WebStudent;
 import org.uqbar.commons.utils.Observable;
 
 import java.util.ArrayList;
@@ -84,6 +85,12 @@ public class Student {
             assignments.add(new Assignment<ConceptualScore>(task));
         else
             assignments.add(new Assignment<NumericScore>(task));
+    }
+
+    public static Student from(WebStudent student) {
+        return new Student(
+                student.getFirstName(), student.getLastName(), student.getCode(), student.getGithubUser()
+        );
     }
 
     public static Student getDummyStudent() {
